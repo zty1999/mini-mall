@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  height: calc(100vh - 70rpx) !important;
+
+  .left_menu {
+    width: 200rpx;
+
+    .menu_item {
+      height: 80rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30rpx;
+    }
+    .active{
+      color: var(--themeColor);
+      border-left: 5rpx solid  currentColor;
+      //currentColor 字体颜色 边框默认为字体颜色可以不加
+    }
+  }
+
+  .right_content {
+    flex: 1;
+    .content_title {
+      height: 80rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30rpx 0;
+      font-size: 30rpx;
+      .delimiter {
+        color: #ccc;
+        padding: 0 10rpx;
+      }
+    }
+    .content_list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 30rpx;
+      .content_item {
+        width: 33.33%;
+        text-align: center;
+        padding: 10rpx 0;
+
+        image {
+          width: 50%;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

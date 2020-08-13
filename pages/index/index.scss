@@ -1,0 +1,81 @@
+/**index.wxss**/
+.index_swiper swiper {
+  width: 750rpx;
+  height: 340rpx;
+
+  image {
+    width: 100%;
+  }
+}
+
+.index_cate {
+  display: flex;
+
+  navigator {
+    padding: 20rpx;
+    flex: 1;
+
+    image {
+      width: 100%;
+    }
+  }
+}
+
+.floor_group {
+  .floor_title {
+    padding: 20rpx 0 10rpx;
+
+    image {
+      width: 100%;
+    }
+  }
+  .floor_list {
+    overflow: hidden;
+
+    navigator {
+      float: left;
+      width: 33.33%;
+      /* box-sizing: border-box; */
+      /* 后四个超链接 */
+      /* 2 3 两个超链接 */
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    navigator:nth-last-child(-n + 4) {
+      /* 原图的宽高 232 *386 */
+      height: 27.72711207vw;
+      /* padding-left: 10rpx; */
+      border-left: 10rpx solid #fff;
+    }
+
+    navigator:nth-child(2),
+    navigator:nth-child(3) {
+      border-bottom: 10rpx solid #fff;
+    }
+  }
+}
+
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
