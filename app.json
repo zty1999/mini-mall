@@ -5,6 +5,7 @@
     "pages/cate/cate",
     "pages/cart/cart",
     "pages/profile/profile",
+    "pages/goods_list/goods_list",
     "pages/goods_detail/goods_detail",
     "pages/collect/collect",
     "pages/auth/auth",
@@ -15,12 +16,14 @@
     "pages/search/search"
   ], 
   "window": {
-    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "购物街",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true,
-    "backgroundColor": "#000"
+    "onReachBottomDistance":50,
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+
   },
   "tabBar": {
     "color": "#000",
@@ -53,6 +56,10 @@
       }
     ]
   },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "lazyCodeLoading": "requiredComponents",
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

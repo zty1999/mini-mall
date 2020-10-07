@@ -1,0 +1,21 @@
+.revice_address_row {
+  .address_btn {
+    padding: 10rpx 20rpx 0;
+    text-align: center;
+    button {
+      width: 60%;
+    }
+  }
+  .user_info_row {
+    padding: 10rpx 20rpx 0;
+
+    .user_info {
+      display: flex;
+
+      .user_number {
+        padding-left: 20rpx;
+        color: #666;
+      }
+    }
+  }
+}

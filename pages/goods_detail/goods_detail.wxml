@@ -1,2 +1,60 @@
-<!--pages/goods_detail/goods_detail.wxml-->
-<text>pages/goods_detail/goods_detail.wxml</text>
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="index_swiper" wx:if="{{goodsInfo.pics.length !== 0}}" >
+    <swiper   indicator-dots autoplay circular>
+      <swiper-item   wx:for="{{goodsInfo.pics}}" wx:key="pic_id" data-url="{{item.pics_mid}}" bindtap="previewImage">
+        <image  mode="aspectFit" src="{{item.pics_mid}}" ></image>
+      </swiper-item>  
+    </swiper>
+  </view>
+  <view wx:else class="placeholder">
+  <image  class="placeholder_img" src="https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg" mode="aspectFit" > </image>
+    
+  </view>
+
+  <!-- 基础信息 -->
+  <view>
+    <!-- 价格 -->
+    <view class="goods_price">￥{{goodsInfo.goods_price}}</view>
+    <view class="goods_name_row">
+      <!-- 标题 -->
+      <view class="goods_name" hover-class="none" hover-stop-propagation="false">
+        {{goodsInfo.goods_name}}
+      </view>
+      <!-- 收藏 -->
+      <view class="goods_collect" bind:tap="handleCollect">
+        <text class="collect_text iconfont {{isCollect? 'icon-shoucang1' : 'icon-shoucang'}}">收藏</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品详情 -->
+  <view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content">
+      <!-- 富文本 -->
+      <rich-text nodes="{{goodsInfo.goods_introduce}}"></rich-text>
+    </view>
+  </view>
+  <view class="btm_tool">
+  <view class="tool_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-yixianshi-"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+    <view class="iconfont icon-gouwuche"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart " bindtap="handleAddCart">
+  加入购物车
+  </view>
+  <view class="tool_item btn_buy">
+    立即购买
+  </view>
+</view>
+</view>

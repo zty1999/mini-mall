@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "Address": "../../components/Address/Address"
+  
+  },
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true
+  
 }

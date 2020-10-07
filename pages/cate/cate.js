@@ -30,7 +30,7 @@ Page({
     } else {
       //  不超过 可以使用旧的数据
       console.log(cates);
-      this.Cates = cates;
+      this.Cates = cates.data;
       let leftMenuList = this.Cates.map((v) => v.cat_name);
       let rightContent = this.Cates[0].children;
       this.setData({
@@ -80,5 +80,11 @@ Page({
       scrollTop: 0,
     });
   },
-
+   /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    this.onLoad()
+    wx.stopPullDownRefresh();
+  },
 });
